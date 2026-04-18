@@ -76,7 +76,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # ─── CORS ───────────────────────────────────────────────
 # Allow your portfolio's HTML file to call this API
 CORS_ALLOW_ALL_ORIGINS = True  # Fine for now; tighten later after deployment
-
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+]
 # ─── EMAIL ──────────────────────────────────────────────
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
